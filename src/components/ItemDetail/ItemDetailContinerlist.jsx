@@ -2,12 +2,21 @@ import { useState, useEffect } from "react"
 import { getDataById } from "../../services/mockServices"
 import { useParams } from "react-router-dom"
 import ItemDetailList from "./ItemDetailList"
+import Loading from "../Loading/Loading"
 
 function ItemDetailListContainer() {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
     const { productId } = useParams()
+    useEffect(()=>{
+        const onResize = ()=> console.log("Cambio el tamaño")
+        window.addEventListener("resize", onResize )
+        return () =>{
+            window.removeEventListener("resize", onResize)
+        }
+    },[])
     useEffect(() => {
+        setLoading(true)
         getDataById(productId)
             .then((result => {
                 setProduct(result)
@@ -17,7 +26,7 @@ function ItemDetailListContainer() {
                 console.log(error)
             })
     }, [productId])
-    if (loading) return <h1>Loading....</h1>
+    if (loading) return <Loading/>
     return (
         <ItemDetailList product={product} />
     )
