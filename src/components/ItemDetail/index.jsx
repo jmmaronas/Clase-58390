@@ -11,7 +11,7 @@ export default function Item({product, add, increment, decrement, count}) {
         <Card.Text>
           {product.descripcion}
         </Card.Text>
-        <Card.Subtitle className='text-center my-3'>$ {product.precio} </Card.Subtitle>
+        <Card.Subtitle className='text-center my-3'>$ {product.precio * count} </Card.Subtitle>
         <ItemCount product={product} add={add} increment={increment} decrement={decrement} count={count}/>
       </Card.Body>
     </Card>

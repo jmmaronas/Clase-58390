@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from 'react-bootstrap';
 
 export default function ItemCount({ add, increment, decrement, count }) {  
-
+    //document.getElementById("1").addEventListener("input", ()=>{})
     return (
         <div>
             <ButtonGroup className='w-100' aria-label="Basic example">

@@ -49,7 +49,7 @@ export const datamock = [
         nombre: "Producto 6",
         stock: 20,
         precio: 8.99,
-        category: "categoria3",
+        category: "perro",
         descripcion: "Descripción del producto 5",
         url_imagen: "descarga.jpeg"
     }
