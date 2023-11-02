@@ -6,10 +6,7 @@ function Formulario() {
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
 
-    const handleInputEmail = (e) => {
-        if (e.target.value.includes("ñ")) {
-            return alert("no se acepta la ñ")
-        }
+    const handleInputEmail = (e) => {        
         setEmail(e.target.value)
     }
 

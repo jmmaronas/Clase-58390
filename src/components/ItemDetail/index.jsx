@@ -1,5 +1,4 @@
 import { Card} from 'react-bootstrap';
-import ItemCount from '../Count/ItemCount';
 
 
 export default function Item({product, add, increment, decrement, count}) {

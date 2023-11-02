@@ -11,12 +11,17 @@ function CartContextProvider({ children }) {
         setCart([...cart, { ...product, qty: count }])
     }
 
-    const qtyCart =()=>{
-        return cart.reduce((acc, current)=> acc+current.qty, 0)
+    const qtyCart = () => {
+        return cart.reduce((acc, current) => acc + current.qty, 0)
+    }
+
+    const removeToCart = (id) => {
+        const newCart = cart.filter(e => e.id !== id)
+        setCart(newCart)
     }
 
     return (
-        <Provider value={{ cart, addToCart, qtyCart }}>
+        <Provider value={{ cart, addToCart, qtyCart, removeToCart }}>
             {children}
         </Provider>
     )

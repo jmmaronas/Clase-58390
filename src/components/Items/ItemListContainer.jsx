@@ -7,20 +7,27 @@ import Loading from "../Loading/Loading"
 function ItemListContainer() {
     const [products, setProducts] = useState({})
     const [loading, setLoading] = useState(true)
+    const [error, setErro] = useState(false)
     const { categoryId } = useParams()
+
     useEffect(() => {
         setLoading(true)
+        setErro(false)
         const asyncFuction = categoryId ? getDataByCategory : getData
         asyncFuction(categoryId)
             .then((result) => {
                 setProducts(result)
-                setLoading(false)
             })
             .catch((error) => {
-                console.log(error)
+                setErro(error)
+            })
+            .finally(()=>{
+                setLoading(false)
             })
     }, [categoryId])
-    if (loading) return <Loading/>
+
+    if (loading) return <Loading/> 
+    if (error) return <h1>{error}</h1>
     return (
         <ItemList products={products} />
     )
