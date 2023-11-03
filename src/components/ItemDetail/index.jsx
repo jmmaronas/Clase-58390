@@ -1,10 +1,10 @@
-import { Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
-export default function Item({product, add, increment, decrement, count}) {
+export default function Item({ product, add, increment, decrement, count }) {
   return (
-    <Card style={{ width: '26rem' }}>
-      <Card.Img variant="top" src={"../"+product.url_imagen} />
+    <>
+      <Card.Img variant="top" src={"../" + product.url_imagen} />
       <Card.Body>
         <Card.Title>{product.nombre}</Card.Title>
         <Card.Text>
@@ -12,6 +12,6 @@ export default function Item({product, add, increment, decrement, count}) {
         </Card.Text>
         <Card.Subtitle className='text-center my-3'>$ {product.precio * count} </Card.Subtitle>
       </Card.Body>
-    </Card>
+    </>
   );
 }
