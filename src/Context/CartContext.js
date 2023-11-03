@@ -8,7 +8,10 @@ function CartContextProvider({ children }) {
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || [])
 
     const addToCart = (product, count) => {
-        setCart([...cart, { ...product, qty: count }])
+        const newCart = [...cart]
+        newCart.push({ ...product, qty: count })
+        setCart(newCart)
+        //setCart([...cart, { ...product, qty: count }])
     }
 
     const qtyCart = () => {

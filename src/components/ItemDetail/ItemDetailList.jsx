@@ -17,10 +17,8 @@ export default function ItemDetailList({ product }) {
             setCount(count - 1)
     }
 
-    const onAdd = () => {
-        console.log(product)
-        addToCart(product, count)
-        console.log(cart)
+    const onAdd = () => {        
+        addToCart(product, count)        
     }
 
     return (
