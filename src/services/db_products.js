@@ -6,7 +6,7 @@ export const datamock = [
         precio: 10.99,
         category: "categoria1",
         descripcion: "Descripción del producto 1",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     },
     {
         id: "2",
@@ -15,7 +15,7 @@ export const datamock = [
         precio: 19.99,
         category: "categoria1",
         descripcion: "Descripción del producto 2",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     },
     {
         id: "3",
@@ -24,7 +24,7 @@ export const datamock = [
         precio: 5.99,
         category: "categoria2",
         descripcion: "Descripción del producto 3",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     },
     {
         id: "4",
@@ -33,7 +33,7 @@ export const datamock = [
         precio: 12.99,
         category: "categoria2",
         descripcion: "Descripción del producto 4",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     },
     {
         id: "5",
@@ -42,7 +42,7 @@ export const datamock = [
         precio: 8.99,
         category: "categoria3",
         descripcion: "Descripción del producto 5",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     },
     {
         id: "6",
@@ -51,6 +51,6 @@ export const datamock = [
         precio: 8.99,
         category: "perro",
         descripcion: "Descripción del producto 5",
-        url_imagen: "descarga.jpeg"
+        url_imagen: "/images/descarga.jpeg"
     }
 ];

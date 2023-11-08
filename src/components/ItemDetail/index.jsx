@@ -1,7 +1,7 @@
 import { Card } from 'react-bootstrap';
 
 
-export default function Item({ product, add, increment, decrement, count }) {
+export default function Item({ product, count }) {
   return (
     <>
       <Card.Img variant="top" src={"../" + product.url_imagen} />

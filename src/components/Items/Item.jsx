@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Item({product, add}) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`/${product.url_imagen}`} />
+      <Card.Img variant="top" src={product.url_imagen} />
       <Card.Body>
         <Card.Title>{product.nombre}</Card.Title>
         <Card.Text>

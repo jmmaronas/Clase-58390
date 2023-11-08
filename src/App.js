@@ -5,6 +5,9 @@ import ItemDetailListContainer from './components/ItemDetail/ItemDetailContinerl
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import CartContextProvider from './Context/CartContext';
 import CartList from './components/Cart/CartList';
+import { datamock } from './services/db_products';
+import { Button } from 'react-bootstrap';
+import { propulateDB } from './services/populateDB';
 
 
 
@@ -14,6 +17,7 @@ function App() {
     <BrowserRouter>
       <CartContextProvider>
         <NavBar />
+        <Button onClick={() => propulateDB(datamock)}>Poblar DB</Button>
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
           <Route path='/product/:productId' element={<ItemDetailListContainer />} />
