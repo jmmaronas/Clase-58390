@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ItemDetail from "./";
+import ItemDetail from ".";
 import ItemCount from "../Count/ItemCount";
 import { useCartContext } from "../../hook/useCartContext"
 import { Card } from "react-bootstrap";
