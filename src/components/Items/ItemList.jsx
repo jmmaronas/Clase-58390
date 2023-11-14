@@ -16,7 +16,7 @@ export default function ItemList({ products }) {
     }
 
     return (
-        <div className="container d-flex gap-4 my-5">
+        <div className="container d-flex gap-4 my-5 wrap-nowrap">
             {products.map(product => <Item key={product.id} product={product} add={onAdd} />)}
         </div>
     )

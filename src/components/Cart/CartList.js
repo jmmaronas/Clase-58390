@@ -4,18 +4,18 @@ import CartItem from './CartItem';
 import Table from 'react-bootstrap/Table';
 
 export default function CartList() {
-    const { cart, removeToCart } = useCartContext()
+    const { cart, removeToCart, increment, decrement } = useCartContext()
 
     const handleDelete = (id) => {
         removeToCart(id)
     }
 
-    const increment = ()=>{
-    
+    const onIncrement = (id)=>{
+        increment(id)
     }
 
-    const decrement = ()=>{
-
+    const onDecrement = (id)=>{
+        decrement(id)
     }
 
     return (
@@ -33,7 +33,7 @@ export default function CartList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {cart.map(item => <CartItem key={item.id} item={item} handleDelete={handleDelete} handleIcrement={increment} handleDecrement={decrement} />)}
+                        {cart.map(item => <CartItem key={item.id} item={item} handleDelete={handleDelete} handleIcrement={onIncrement} handleDecrement={onDecrement} />)}
                     </tbody>
                 </Table>
             </div>

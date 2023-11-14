@@ -14,6 +14,20 @@ function CartContextProvider({ children }) {
         //setCart([...cart, { ...product, qty: count }])
     }
 
+    const increment= (id)=>{
+        const newCart = [...cart]
+        const index = cart.findIndex(e=>e.id=id)
+        newCart[index].qty++
+        setCart(newCart)
+    }
+
+    const decrement = (id)=>{
+        const newCart = [...cart]
+        const index = cart.findIndex(e=>e.id=id)
+        newCart[index].qty--
+        setCart(newCart)
+    }
+
     const qtyCart = () => {
         return cart.reduce((acc, current) => acc + current.qty, 0)
     }
@@ -24,7 +38,7 @@ function CartContextProvider({ children }) {
     }
 
     return (
-        <Provider value={{ cart, addToCart, qtyCart, removeToCart }}>
+        <Provider value={{ cart, addToCart, qtyCart, removeToCart, increment, decrement }}>
             {children}
         </Provider>
     )
